@@ -1,0 +1,20 @@
+{
+  "name": "pgats-desafio-programacao",
+  "version": "1.0.0",
+  "description": "Desafio do modulo de programação da PGATS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "mocha": "^11.7.5",
+    "mochawesome": "^7.1.4"
+  }
+}
