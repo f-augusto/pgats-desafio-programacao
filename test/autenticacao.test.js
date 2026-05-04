@@ -20,5 +20,23 @@ describe('Testes de Autenticação', function() {
   it('Deve retornar erro para login com senha errada', function() {
     const resultado = fazerLogin('fernando.santos@pgats.com', 'fsSenhaErrada123')
     assert.equal(resultado, 'Credenciais incorretas.')
-  })  
+  })
+
+  it('Deve lançar erro para login sem email', function() {
+    assert.throws(
+      function () { fazerLogin('', 'fsSenhaCerta123') },
+      { 
+        message: 'Email e senha são obrigatórios.' 
+      }
+    )
+  })
+
+  it('Deve lançar erro para login sem senha', function() {
+    assert.throws(
+      function () { fazerLogin('fernando.santos@pgats.com', '') },
+       { 
+        message: 'Email e senha são obrigatórios.' 
+      }
+    )
+  })
 })
